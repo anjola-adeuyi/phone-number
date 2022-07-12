@@ -11,3 +11,8 @@ print(phonenumbers.format_number(ch_number, phonenumbers.PhoneNumberFormat.INTER
 print(phonenumbers.format_number(ch_number, phonenumbers.PhoneNumberFormat.NATIONAL))
 print(phonenumbers.format_number(ch_number, phonenumbers.PhoneNumberFormat.RFC3966))
 print(geocoder.description_for_number(ch_number, "en"))
+
+from phonenumbers import carrier
+print(carrier.name_for_number(ch_number, "en"))
+service_number = phonenumbers.parse(number, "NG")
+print(carrier.name_for_number(service_number, "en"))
